@@ -7,12 +7,20 @@
         <title>{{ config('app.name') }}</title>
 
         @vite('resources/css/app.css')
+
+        @if(config('services.fathom.site_id'))
+        <script src="https://cdn.usefathom.com/script.js" data-site="{{ config('services.fathom.site_id') }}" defer></script>
+        @endif
     </head>
     <body class="bg-pink-100">
-        <div class="flex justify-center">
+        <div class="flex justify-center flex-col">
             <h1 class="p-8 text-3xl text-pink-700">
                 Welcome to the one and only Marslanders!
             </h1>
+
+            <h2 class="p-8 text-4xl text-pink-700">
+                TO THE MOON!
+            </h2>
         </div>
     </body>
 </html>
