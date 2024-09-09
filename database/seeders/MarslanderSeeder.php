@@ -43,6 +43,7 @@ class MarslanderSeeder extends Seeder
             foreach ($item as $key => $data) {
                 $id = (int) Str::of($key)->after('#')->__toString();
                 $rank = $data['rank'];
+                $inscriptionId = $data['inscriptionId'];
 
                 if (!is_int($id) || $id <= 0) {
                     $this->command->warn("Invalid ID for key: {$key}");
@@ -54,15 +55,16 @@ class MarslanderSeeder extends Seeder
                     continue;
                 }
 
-                if (! isset($data['inscriptionId'])) {
+                if (! $inscriptionId) {
                     $this->command->warn("Missing inscriptionId for key: {$key}");
                     continue;
                 }
 
                 DB::table('marslanders')->insert([
                     'id' => $id,
-                    'inscription_id' => $data['inscriptionId'],
+                    'inscription_id' => $inscriptionId,
                     'rank' => $rank,
+                    'hash' => Str::of(hash('sha256', $inscriptionId))->lower()->take(8),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ]);

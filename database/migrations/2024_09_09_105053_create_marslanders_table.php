@@ -11,6 +11,7 @@ return new class extends Migration {
             $table->id();
             $table->integer('rank')->unsigned();
             $table->string('inscription_id')->unique();
+            $table->string('hash', 8);
             $table->timestamps();
         });
     }
