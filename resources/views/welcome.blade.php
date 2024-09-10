@@ -21,6 +21,16 @@
             <h2 class="p-8 text-4xl text-pink-700">
                 TO THE MOON!
             </h2>
+
+            @if(config('services.twitter.handle'))
+            <a
+                href="{{ Str::of('https://x.com/')->append(config('services.twitter.handle')) }}"
+                class="p-8 text-pink-700 hover:text-pink-500"
+                target="_blank"
+            >
+                <x-icon-twitter-x class="w-6"/>
+            </a>
+            @endif
         </div>
     </body>
 </html>
