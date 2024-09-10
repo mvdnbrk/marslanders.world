@@ -4,4 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Marslander extends Model {}
+class Marslander extends Model
+{
+    protected $hidden = [
+        'hash',
+    ];
+}
