@@ -39,4 +39,8 @@ return [
         'site_id' => env('FATHOM_SITE_ID'),
     ],
 
+    'twitter' => [
+        'handle' => env('TWITTER_HANDLE'),
+    ],
+
 ];
