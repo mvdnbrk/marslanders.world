@@ -16,8 +16,8 @@ class MarslanderFactory extends Factory
             'rank' => 99,
             'inscription_id' => 'd69deae6e29207fbc1b46a7a878ad631f790aadc3b5d00da4b9960c371eeae62i0',
             'hash' => 'a059257c',
-            'created' => now(),
-            'updated' => now(),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }
