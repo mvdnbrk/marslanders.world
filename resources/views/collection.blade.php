@@ -1,6 +1,6 @@
 <x-layout.main>
     <div class="flex justify-center flex-col">
-        <h1 class="mt-12 text-2xl text-orange-700">
+        <h1 class="text-2xl text-orange-700">
             Marslanders Collection
         </h1>
 
