@@ -1,9 +1,9 @@
 <x-layout.main>
     <div class="flex justify-center flex-col">
-        <h1 class="p-4 mt-4 text-2xl text-rose-700">
+        <h1 class="mt-4 text-2xl text-orange-700">
             Marslander #{{ $marslander->id }}
         </h1>
-        <div class="p-4 mt-2">
+        <div class="mt-2">
             <img
                 src="{{ $marslander->image_url }}"
                 width="500"
