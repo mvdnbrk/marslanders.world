@@ -12,7 +12,7 @@
         <script src="https://cdn.usefathom.com/script.js" data-site="{{ config('services.fathom.site_id') }}" defer></script>
         @endif
     </head>
-    <body class="bg-pink-100">
+    <body class="bg-rose-100">
         <main>
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {{ $slot }}

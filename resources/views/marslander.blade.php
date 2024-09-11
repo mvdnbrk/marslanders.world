@@ -1,6 +1,6 @@
 <x-layout.main>
     <div class="flex justify-center flex-col">
-        <h1 class="p-4 mt-4 text-2xl text-pink-700">
+        <h1 class="p-4 mt-4 text-2xl text-rose-700">
             Marslander #{{ $marslander->id }}
         </h1>
         <div class="p-4 mt-2">
