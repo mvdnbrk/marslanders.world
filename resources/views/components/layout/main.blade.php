@@ -13,6 +13,7 @@
         @endif
     </head>
     <body class="bg-orange-200">
+        <x-nav-header/>
         <main>
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {{ $slot }}
