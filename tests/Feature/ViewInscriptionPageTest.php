@@ -12,6 +12,13 @@ class ViewInscriptionPageTest extends TestCase
 {
     use RefreshDatabase;
 
+    public function setUp(): void
+    {
+        parent::setUp();
+
+        $this->artisan('migrate');
+    }
+
     #[Test]
     public function a_request_to_the_inscription_page_should_return_a_200_status_code(): void
     {
