@@ -7,6 +7,13 @@ use Tests\TestCase;
 
 class ViewCollectionPageTest extends TestCase
 {
+    public function setUp(): void
+    {
+        parent::setUp();
+
+        $this->artisan('migrate');
+    }
+
     #[Test]
     public function a_request_to_the_collection_page_should_return_a_200_status_code(): void
     {
