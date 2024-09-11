@@ -9,7 +9,7 @@ class CollectionController extends Controller
 {
     public function __invoke(): View
     {
-        $marslanders = Marslander::paginate(25);
+        $marslanders = Marslander::paginate(24);
 
         return view('collection', [
             'marslanders' => $marslanders,
