@@ -6,7 +6,7 @@
             <img
                 class="w-60 rounded-md z-10"
                 src="{{ $marslander->image_url }}"
-                alt="Marslander #{{ $marslander->id }}"
+                alt="{{ $marslander->name }}"
                 width="500"
                 height="500"
             >
@@ -17,7 +17,7 @@
             class="hover:underline"
             href="{{ route('inscription', ['marslander' => $marslander]) }}"
         >
-            Marslander #{{ $marslander->id }}
+            {{ $marslander->name }}
         </a>
     </div>
 </div>
