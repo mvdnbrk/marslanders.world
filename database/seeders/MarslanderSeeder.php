@@ -66,6 +66,7 @@ class MarslanderSeeder extends Seeder
                 DB::table('marslanders')->insert([
                     'id' => $id,
                     'inscription_id' => $inscriptionId,
+                    'name' => $key,
                     'rank' => $rank,
                     'hash' => Str::of(hash('sha256', $inscriptionId))->lower()->take(8),
                     'created_at' => now(),

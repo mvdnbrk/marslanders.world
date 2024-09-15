@@ -10,8 +10,9 @@ return new class extends Migration
     {
         Schema::create('marslanders', function (Blueprint $table) {
             $table->id();
-            $table->integer('rank')->unsigned();
             $table->string('inscription_id')->unique();
+            $table->string('name')->nullable();
+            $table->integer('rank')->unsigned();
             $table->string('hash', 8);
             $table->timestamps();
         });
