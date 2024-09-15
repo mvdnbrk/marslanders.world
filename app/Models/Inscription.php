@@ -15,6 +15,13 @@ class Inscription extends Model
 
     protected $primaryKey = 'inscription_id';
 
+    protected $fillable = [
+        'inscription_id',
+        'name',
+        'rank',
+        'hash',
+    ];
+
     protected $hidden = [
         'hash',
     ];

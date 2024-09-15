@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Inscription;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
@@ -56,13 +56,11 @@ class MarslanderSeeder extends Seeder
                     continue;
                 }
 
-                DB::table('inscriptions')->insert([
+                Inscription::create([
                     'inscription_id' => $inscriptionId,
                     'name' => $key,
                     'rank' => $rank,
                     'hash' => Str::of(hash('sha256', $inscriptionId))->lower()->take(8),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ]);
             }
         });
