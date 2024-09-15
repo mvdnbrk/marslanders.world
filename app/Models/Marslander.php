@@ -21,16 +21,20 @@ class Marslander extends Model
 
     protected function getInternalCollectionId(): int
     {
-        return (int) Str::of($this->name)->after('#')->__toString();
+        return (int) Str::of($this->name)
+            ->trim()
+            ->after('#')
+            ->__toString();
     }
 
     protected function imageUrl(): Attribute
     {
         return Attribute::make(
-            get: fn () => 'https://cdn.marslanders.world/images/inscription/'
-                .$this->getInternalCollectionId().'_500_'
-                .$this->hash.
-                '.webp',
+            get: fn () => Str::of('https://cdn.marslanders.world/images/inscription/')
+                ->append($this->getInternalCollectionId())
+                ->append('_500_')
+                ->append($this->hash)
+                ->append('.webp')
         );
     }
 }
