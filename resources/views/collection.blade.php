@@ -1,7 +1,7 @@
 <x-layout.main>
     <div class="flex justify-center flex-col">
         <h1 class="text-2xl text-orange-700">
-            Marslanders Collection
+            Mars Landers Collection
         </h1>
 
         <div class="flex flex-col mt-14 text-orange-700">
