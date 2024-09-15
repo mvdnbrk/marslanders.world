@@ -56,7 +56,7 @@ class MarslanderSeeder extends Seeder
                     continue;
                 }
 
-                DB::table('marslanders')->insert([
+                DB::table('inscriptions')->insert([
                     'inscription_id' => $inscriptionId,
                     'name' => $key,
                     'rank' => $rank,

@@ -6,14 +6,14 @@
 
         <div class="flex flex-col mt-14 text-orange-700">
             <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                @foreach($marslanders as $marslander)
-                    <x-card :marslander="$marslander"/>
+                @foreach($inscriptions as $inscription)
+                    <x-card :inscription="$inscription"/>
                 @endforeach
             </div>
         </div>
 
         <div class="mt-12">
-            {{ $marslanders->links() }}
+            {{ $inscriptions->links() }}
         </div>
     </div>
 </x-layout.main>

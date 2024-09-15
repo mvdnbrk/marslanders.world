@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Marslander;
+use App\Models\Inscription;
 use Illuminate\View\View;
 
 class CollectionController extends Controller
 {
     public function __invoke(): View
     {
-        $marslanders = Marslander::paginate(24);
+        $inscriptions = Inscription::paginate(24);
 
         return view('collection', [
-            'marslanders' => $marslanders,
+            'inscriptions' => $inscriptions,
         ]);
     }
 }
