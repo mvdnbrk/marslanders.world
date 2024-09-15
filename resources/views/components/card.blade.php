@@ -4,7 +4,7 @@
             href="{{ route('inscription', ['marslander' => $marslander]) }}"
         >
             <img
-                class="w-60 rounded-md z-10"
+                class="w-60 rounded-md hover:scale-105 ease-out duration-300"
                 src="{{ $marslander->image_url }}"
                 alt="{{ $marslander->name }}"
                 width="500"
@@ -14,7 +14,7 @@
     </div>
     <div class="px-4 py-4 sm:px-6">
         <a
-            class="hover:underline"
+            class="hover:underline underline-offset-2"
             href="{{ route('inscription', ['marslander' => $marslander]) }}"
         >
             {{ $marslander->name }}
