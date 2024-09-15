@@ -8,7 +8,7 @@
                 src="{{ $marslander->image_url }}"
                 width="500"
                 height="500"
-                class="rounded-lg"
+                class="rounded-md"
                 alt="={{ $marslander->name }}"
             >
         </div>
