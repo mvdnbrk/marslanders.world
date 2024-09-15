@@ -11,10 +11,6 @@ class Inscription extends Model
 {
     use HasFactory;
 
-    protected $keyType = 'string';
-
-    protected $primaryKey = 'inscription_id';
-
     protected $fillable = [
         'inscription_id',
         'name',
