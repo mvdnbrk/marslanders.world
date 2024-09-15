@@ -41,15 +41,8 @@ class MarslanderSeeder extends Seeder
     {
         $this->getJsonAsCollection()->each(function ($item) {
             foreach ($item as $key => $data) {
-                $id = (int) Str::of($key)->after('#')->__toString();
                 $rank = $data['rank'];
                 $inscriptionId = $data['inscriptionId'];
-
-                if (! is_int($id) || $id <= 0) {
-                    $this->command->warn("Invalid ID for key: {$key}");
-
-                    continue;
-                }
 
                 if (! is_int($rank) || $rank <= 0) {
                     $this->command->warn("Invalid rank for key: {$key}");
@@ -64,7 +57,6 @@ class MarslanderSeeder extends Seeder
                 }
 
                 DB::table('marslanders')->insert([
-                    'id' => $id,
                     'inscription_id' => $inscriptionId,
                     'name' => $key,
                     'rank' => $rank,

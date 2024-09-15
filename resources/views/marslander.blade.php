@@ -1,7 +1,7 @@
 <x-layout.main>
     <div class="flex justify-center flex-col">
         <h1 class="text-2xl text-orange-700">
-            Marslander #{{ $marslander->id }}
+            {{ $marslander->name }}
         </h1>
         <div class="mt-8">
             <img
@@ -9,7 +9,7 @@
                 width="500"
                 height="500"
                 class="rounded-lg"
-                alt="Marslander #{{ $marslander->id }}"
+                alt="={{ $marslander->name }}"
             >
         </div>
     </div>
