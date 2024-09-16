@@ -3,11 +3,11 @@
 namespace Database\Seeders;
 
 use App\Models\Inscription;
-use Illuminate\Support\Str;
-use Illuminate\Database\Seeder;
 use App\Models\InscriptionTrait;
+use Illuminate\Database\Seeder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 
 class MarslanderSeeder extends Seeder
 {
@@ -65,7 +65,7 @@ class MarslanderSeeder extends Seeder
                     'hash' => Str::of(hash('sha256', $inscriptionId))->lower()->take(8),
                 ]);
 
-                $traits->each(function($item, $key) use ($model) {
+                $traits->each(function ($item, $key) use ($model) {
                     $model->traits()->save(new InscriptionTrait([
                         'type' => $key,
                         'value' => $item['type'],
