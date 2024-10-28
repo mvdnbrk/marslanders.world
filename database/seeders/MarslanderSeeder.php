@@ -69,6 +69,7 @@ class MarslanderSeeder extends Seeder
                     $model->traits()->save(new InscriptionTrait([
                         'type' => $key,
                         'value' => $item['type'],
+                        'rarity' => (float) Str::of($item['rarity'])->before('%')->toString(),
                     ]));
                 });
             }
