@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SearchController;
-use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\CollectionController;
+use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\InscriptionController;
+use App\Http\Controllers\SearchController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomepageController::class)->name('home');
 
