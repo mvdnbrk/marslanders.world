@@ -1,8 +1,11 @@
 <x-layout.main>
     <div class="flex justify-center flex-col">
-        <h1 class="mb-6 text-3xl font-bold text-amber-950">
-            Welcome to the Mars Landers!
-        </h1>
+        <div class="flex mb-12 items-center justify-center bg-white p-4 rounded-md">
+            <img
+                class="w-64 object-cover"
+                src="{{ asset('9677de93-058b-4252-9bf0-09feac114cd1.jpg') }}"
+            >
+        </div>
 
         <x-search/>
     </div>
