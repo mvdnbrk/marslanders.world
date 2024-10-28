@@ -1,8 +1,13 @@
 <x-layout.main>
     <div class="flex justify-center flex-col">
-        <h1 class="text-2xl text-amber-950">
-            {{ $inscription->name }}
-        </h1>
+        <div class="bg-white opacity-90 px-4 py-2 rounded-md">
+            <h1 class="text-2xl text-amber-950">
+                {{ $inscription->name }}
+            </h1>
+            <h2 class="text-amber-900">
+                Rank {{ $inscription->rank }}
+            </h2>
+        </div>
 
         <div class="mt-8">
             <img
