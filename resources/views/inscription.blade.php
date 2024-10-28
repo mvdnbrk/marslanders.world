@@ -24,8 +24,13 @@
                 <dl class="divide-y divide-orange-400">
                     @foreach($inscription->traits as $trait)
                     <div class="px-0 md:px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                        <dt class="text-sm font-medium leading-6 text-amber-950">{{ $trait->type }}</dt>
-                        <dd class="mt-1 text-sm leading-6 text-amber-800 sm:col-span-2 sm:mt-0">{{ $trait->value }}</dd>
+                        <dt class="text-sm font-medium leading-6 text-amber-950">
+                            {{ $trait->type }}
+                        </dt>
+                        <dd class="flex mt-1 text-sm leading-6 text-amber-800 sm:col-span-2 sm:mt-0">
+                            <span class="flex-grow">{{ $trait->value }}</span>
+                            <span class="ml-4 flex-shrink-0">{{ $trait->rarity }}%</span>
+                        </dd>
                     </div>
                     @endforeach
                 </dl>
