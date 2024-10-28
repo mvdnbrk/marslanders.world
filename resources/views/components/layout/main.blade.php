@@ -12,7 +12,7 @@
         <script src="https://cdn.usefathom.com/script.js" data-site="{{ config('services.fathom.site_id') }}" defer></script>
         @endif
     </head>
-    <body class="bg-orange-200 dark:bg-slate-900 bg-cover bg-no-repeat bg-fixed" style="background-image: url('https://cdn.marslanders.world/images/bg-light.webp')">
+    <body class="bg-rose-900 dark:bg-slate-900 bg-cover bg-no-repeat bg-fixed" style="background-image: url('https://cdn.marslanders.world/images/bg-light.webp')">
         <x-nav-header/>
 
         <main>
