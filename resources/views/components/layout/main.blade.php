@@ -12,11 +12,12 @@
         <script src="https://cdn.usefathom.com/script.js" data-site="{{ config('services.fathom.site_id') }}" defer></script>
         @endif
     </head>
-    <body class="bg-orange-200 dark:bg-slate-900">
+    <body class="bg-orange-200 dark:bg-slate-900 bg-cover bg-no-repeat bg-fixed" style="background-image: url('https://cdn.marslanders.world/images/bg-light.webp')">
         <x-nav-header/>
+
         <main>
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            {{ $slot }}
+                {{ $slot }}
             </div>
         </main>
 
