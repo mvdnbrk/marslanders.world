@@ -14,6 +14,7 @@ return new class extends Migration
             $table->foreignIdFor(Inscription::class)->constrained();
             $table->string('type');
             $table->string('value');
+            $table->float('rarity', 2)->default(0);
         });
     }
 

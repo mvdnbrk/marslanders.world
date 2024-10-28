@@ -14,6 +14,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->integer('rank')->unsigned();
             $table->string('hash', 8);
+            $table->boolean('burned')->default(0);
             $table->timestamps();
         });
     }
