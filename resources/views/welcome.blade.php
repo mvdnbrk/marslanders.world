@@ -1,9 +1,9 @@
 <x-layout.main>
     <div class="flex justify-center flex-col">
-        <div class="flex mb-12 items-center justify-center bg-white p-4 rounded-md">
+        <div class="flex mb-12 items-center justify-center bg-marslanders-blue p-4 rounded-md">
             <img
                 class="w-64 object-cover"
-                src="{{ asset('9677de93-058b-4252-9bf0-09feac114cd1.jpg') }}"
+                src="{{ asset('images/marslanders_logo.png') }}"
             >
         </div>
 
