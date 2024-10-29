@@ -1,4 +1,4 @@
-<nav class="py-4 mb-12 bg-rose-950 border-b">
+<nav class="py-4 mb-12 bg-slate-800 border-b border-b-slate-400 shadow-md">
     <div class="flex mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <span class="flex-grow">
             <a
