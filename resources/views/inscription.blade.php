@@ -7,6 +7,8 @@
             <h2 class="text-amber-900">
                 Rank {{ $inscription->rank }}
             </h2>
+
+            <p>Rarity: {{ $inscription->rarityLabel() }}</p>
         </div>
 
         <div class="mt-8">

@@ -23,6 +23,23 @@ class Inscription extends Model
         'hash',
     ];
 
+    public function rarityLabel(): string
+    {
+        if ($this->rank < 200) {
+            return 'Very Rare';
+        }
+
+        if ($this->rank < 1000) {
+            return 'Rare';
+        }
+
+        if ($this->rank < 1000) {
+            return 'UnCommon';
+        }
+
+        return 'Common';
+    }
+
     protected function getInternalCollectionId(): int
     {
         return (int) Str::of($this->name)
