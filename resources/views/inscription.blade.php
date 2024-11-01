@@ -1,6 +1,9 @@
 <x-layout.main>
     <div class="flex justify-center flex-col">
         <div class="flex min-h-24 items-center bg-white opacity-90 px-4 py-2 rounded-md">
+            @if($inscription->isBurned())
+            <x-icon-flame class="w-8 h-8 mr-4 text-red-600"/>
+            @endif
             <h1 class="flex-grow text-3xl font-extrabold text-amber-950">
                 {{ $inscription->name }}
             </h1>
