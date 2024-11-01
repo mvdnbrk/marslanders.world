@@ -1,14 +1,18 @@
 <x-layout.main>
     <div class="flex justify-center flex-col">
-        <div class="bg-white opacity-90 px-4 py-2 rounded-md">
-            <h1 class="text-2xl text-amber-950">
+        <div class="flex items-center bg-white opacity-90 px-4 py-2 rounded-md">
+            <h1 class="flex-grow text-3xl font-extrabold text-amber-950">
                 {{ $inscription->name }}
             </h1>
-            <h2 class="text-amber-900">
-                Rank {{ $inscription->rank }}
-            </h2>
-
-            <p>Rarity: {{ $inscription->rarityLabel() }}</p>
+            <div class="flex flex-col items-center">
+                <p class="flex items-end py-1 gap-x-2 border-b {{ $inscription->rarityTextColor() }} text-xl font-bold">
+                    <x-icon-rank class="w-10 h-10"/>
+                    {{ $inscription->rarityLabel() }}
+                </p>
+                <p class="text-amber-950">
+                    Rank {{ $inscription->rank }}
+                </p>
+            </div>
         </div>
 
         <div class="mt-8">

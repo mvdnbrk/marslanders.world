@@ -23,6 +23,23 @@ class Inscription extends Model
         'hash',
     ];
 
+    public function rarityTextColor(): string
+    {
+        if ($this->rank < 200) {
+            return 'text-rose-700';
+        }
+
+        if ($this->rank < 1000) {
+            return 'text-amber-600';
+        }
+
+        if ($this->rank < 2500) {
+            return 'text-green-800';
+        }
+
+        return 'text-zinc-700';
+    }
+
     public function rarityLabel(): string
     {
         if ($this->rank < 200) {
