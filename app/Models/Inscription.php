@@ -23,6 +23,18 @@ class Inscription extends Model
         'hash',
     ];
 
+    protected function casts(): array
+    {
+        return [
+            'burned' => 'boolean',
+        ];
+    }
+
+    public function isBurned(): bool
+    {
+        return $this->burned;
+    }
+
     public function rarityTextColor(): string
     {
         if ($this->rank < 200) {
