@@ -43,4 +43,8 @@ return [
         'handle' => env('TWITTER_HANDLE'),
     ],
 
+    'ordinalswallet' => [
+        'base_url' => 'https://dogeturbo.ordinalswallet.com/',
+    ],
+
 ];
