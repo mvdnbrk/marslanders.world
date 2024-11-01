@@ -1,6 +1,6 @@
 <x-layout.main>
     <div class="flex justify-center flex-col">
-        <div class="flex items-center bg-white opacity-90 px-4 py-2 rounded-md">
+        <div class="flex min-h-24 items-center bg-white opacity-90 px-4 py-2 rounded-md">
             <h1 class="flex-grow text-3xl font-extrabold text-amber-950">
                 {{ $inscription->name }}
             </h1>
