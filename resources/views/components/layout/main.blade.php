@@ -8,6 +8,7 @@
 
         <meta name="description" content="Mars Landers, The First High-Quality Recursive Revealer on Doginals!">
 
+        <x-head.favicons/>
         <x-head.meta-opengraph/>
         <x-head.meta-twitter/>
 
