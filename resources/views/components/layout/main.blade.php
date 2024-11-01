@@ -6,6 +6,11 @@
 
         <title>{{ config('app.name') }}</title>
 
+        <meta name="description" content="Mars Landers, The First High-Quality Recursive Revealer on Doginals!">
+
+        <x-head.meta-opengraph/>
+        <x-head.meta-twitter/>
+
         @vite('resources/css/app.css')
 
         @if(config('services.fathom.site_id'))
