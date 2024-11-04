@@ -13,10 +13,10 @@ enum InscriptionRarity
 
     public static function slugs(): array
     {
-        return array_map(
-            'strtolower',
-            array_map(fn ($case) => $case->name, self::cases())
-        );
+        return collect(self::cases())
+            ->map(fn ($case) => $case->name)
+            ->map('strtolower')
+            ->all();
     }
 
     public static function fromSlug(?string $slug): ?self
