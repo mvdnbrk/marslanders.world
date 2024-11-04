@@ -19,7 +19,7 @@ enum InscriptionRarity
         );
     }
 
-    public static function fromSlug(string $slug): ?self
+    public static function fromSlug(?string $slug): ?self
     {
         return Collection::make(self::cases())
             ->first(
