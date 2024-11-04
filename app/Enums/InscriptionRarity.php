@@ -11,7 +11,7 @@ enum InscriptionRarity: string
 
     public function styles(): string
     {
-        return match($this) {
+        return match ($this) {
             self::VERYRARE => 'text-rose-700',
             self::RARE => 'text-amber-600',
             self::UNCOMMON => 'text-green-800',

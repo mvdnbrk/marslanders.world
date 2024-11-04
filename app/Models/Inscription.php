@@ -38,7 +38,7 @@ class Inscription extends Model
 
     public function rarity(): InscriptionRarity
     {
-        return match(true) {
+        return match (true) {
             $this->rank < 200 => InscriptionRarity::VERYRARE,
             $this->rank < 1000 => InscriptionRarity::RARE,
             $this->rank < 2500 => InscriptionRarity::UNCOMMON,
