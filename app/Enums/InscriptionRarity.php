@@ -2,12 +2,23 @@
 
 namespace App\Enums;
 
-enum InscriptionRarity: string
+enum InscriptionRarity
 {
-    case VERYRARE = 'Very Rare';
-    case RARE = 'Rare';
-    case UNCOMMON = 'Uncommon';
-    case COMMON = 'Common';
+    case VERYRARE;
+    case RARE;
+    case UNCOMMON;
+    case COMMON;
+
+    public function name(): string
+    {
+        return match ($this) {
+            self::VERYRARE => 'Very Rare',
+            self::RARE => 'Rare',
+            self::UNCOMMON => 'Uncommon',
+            self::COMMON => 'Common',
+            default => 'Rarity Not Found',
+        };
+    }
 
     public function styles(): string
     {
