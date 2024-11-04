@@ -3,10 +3,10 @@
 namespace App\Jobs;
 
 use App\Models\Inscription;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Queue\Queueable;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class RetrieveBurnedInscriptions implements ShouldQueue
 {
@@ -31,15 +31,14 @@ class RetrieveBurnedInscriptions implements ShouldQueue
         if ($response->successful()) {
             collect($response->json('inscriptions'))
                 ->filter(
-                    fn ($item) =>
-                        isset($item['collection']['slug'])
+                    fn ($item) => isset($item['collection']['slug'])
                         && $item['collection']['slug'] === 'mars-landers'
                 )
                 ->pluck('id')
                 ->each(function ($inscriptionId) {
                     Inscription::where('inscription_id', $inscriptionId)
                         ->update([
-                            'burned' => true
+                            'burned' => true,
                         ]);
                 });
         }
