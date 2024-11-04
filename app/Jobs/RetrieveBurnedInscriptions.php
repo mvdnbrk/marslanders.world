@@ -37,6 +37,7 @@ class RetrieveBurnedInscriptions implements ShouldQueue
                 ->pluck('id')
                 ->each(function ($inscriptionId) {
                     Inscription::where('inscription_id', $inscriptionId)
+                        ->where('burned', false)
                         ->update([
                             'burned' => true,
                         ]);
