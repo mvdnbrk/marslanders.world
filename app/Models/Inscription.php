@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\InscriptionRarity;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -35,38 +36,14 @@ class Inscription extends Model
         return $this->burned;
     }
 
-    public function rarityTextColor(): string
+    public function rarity(): InscriptionRarity
     {
-        if ($this->rank < 200) {
-            return 'text-rose-700';
-        }
-
-        if ($this->rank < 1000) {
-            return 'text-amber-600';
-        }
-
-        if ($this->rank < 2500) {
-            return 'text-green-800';
-        }
-
-        return 'text-zinc-700';
-    }
-
-    public function rarityLabel(): string
-    {
-        if ($this->rank < 200) {
-            return 'Very Rare';
-        }
-
-        if ($this->rank < 1000) {
-            return 'Rare';
-        }
-
-        if ($this->rank < 1000) {
-            return 'UnCommon';
-        }
-
-        return 'Common';
+        return match(true) {
+            $this->rank < 200 => InscriptionRarity::VERYRARE,
+            $this->rank < 1000 => InscriptionRarity::RARE,
+            $this->rank < 2500 => InscriptionRarity::UNCOMMON,
+            default => InscriptionRarity::COMMON,
+        };
     }
 
     protected function getInternalCollectionId(): int

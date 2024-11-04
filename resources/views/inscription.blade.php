@@ -8,9 +8,9 @@
                 {{ $inscription->name }}
             </h1>
             <div class="flex flex-col items-center">
-                <p class="flex items-end py-1 gap-x-2 border-b {{ $inscription->rarityTextColor() }} text-xl font-bold">
+                <p class="flex items-end py-1 gap-x-2 border-b {{ $inscription->rarity()->styles() }} text-xl font-bold">
                     <x-icon-rank class="w-10 h-10"/>
-                    {{ $inscription->rarityLabel() }}
+                    {{ $inscription->rarity()->value }}
                 </p>
                 <p class="text-amber-950">
                     Rank {{ $inscription->rank }}
