@@ -2,7 +2,11 @@
     <div class="flex justify-center flex-col">
         <div class="flex items-center min-h-24 bg-white opacity-90 px-4 py-2 rounded-md">
             <h1 class="text-3xl font-extrabold text-amber-950">
+                @if ($rarity)
+                {{ $rarity->name() }} Mars Landers
+                @else
                 Mars Landers Collection
+                @endif
             </h1>
         </div>
 

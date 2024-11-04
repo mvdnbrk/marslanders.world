@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\InscriptionRarity;
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\InscriptionController;
@@ -11,6 +12,10 @@ Route::get('/', HomepageController::class)
 
 Route::get('/collection', CollectionController::class)
     ->name('collection');
+
+Route::get('/collection/{rarity}', CollectionController::class)
+    ->whereIn('rarity', InscriptionRarity::slugs())
+    ->name('collection.rarity');
 
 Route::get(
     '/inscription/{inscription:inscription_id}',
