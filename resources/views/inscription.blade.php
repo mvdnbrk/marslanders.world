@@ -29,7 +29,7 @@
         </div>
 
         <div class="mt-12 bg-white opacity-75 rounded">
-            <div class="px-0 md:px-4 py-2">
+            <div class="px-2 md:px-4 py-2">
                 <h3 class="text-base font-semibold leading-7 text-amber-950">
                     Traits
                 </h3>
@@ -37,7 +37,7 @@
             <div class="border-t border-orange-400">
                 <dl class="divide-y divide-orange-400">
                     @foreach($inscription->traits as $trait)
-                    <div class="px-0 md:px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                    <div class="px-2 md:px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                         <dt class="text-sm font-medium leading-6 text-amber-950">
                             {{ $trait->type }}
                         </dt>
