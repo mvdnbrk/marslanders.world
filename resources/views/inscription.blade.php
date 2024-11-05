@@ -1,18 +1,18 @@
 <x-layout.main>
     <div class="flex justify-center flex-col">
-        <div class="flex min-h-24 items-center bg-white opacity-90 px-4 py-2 rounded-md">
+        <div class="flex min-h-24 items-center bg-white opacity-90 px-4 rounded-md">
             @if($inscription->isBurned())
             <x-icon-flame class="w-8 h-8 mr-4 text-red-600"/>
             @endif
-            <h1 class="flex-grow text-3xl font-extrabold text-amber-950">
+            <h1 class="flex-grow text-xl md:text-3xl font-extrabold text-amber-950">
                 {{ $inscription->name }}
             </h1>
             <div class="flex flex-col items-center">
-                <p class="flex items-end py-1 gap-x-2 border-b {{ $inscription->rarity()->styles() }} text-xl font-bold">
-                    <x-icon-rank class="w-10 h-10"/>
+                <p class="flex items-end py-1 gap-x-2 border-b {{ $inscription->rarity()->styles() }} text-base md:text-xl font-bold">
+                    <x-icon-rank class="w-8 h-8 md:w-10 md:h-10"/>
                     {{ $inscription->rarity()->name() }}
                 </p>
-                <p class="text-amber-950">
+                <p class="text-amber-950 text-sm md:text-base">
                     Rank {{ $inscription->rank }}
                 </p>
             </div>
