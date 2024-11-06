@@ -8,5 +8,7 @@
         </div>
 
         <x-search/>
+
+        <x-rarity-navigation/>
     </div>
 </x-layout.main>
