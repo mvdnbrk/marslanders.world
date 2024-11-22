@@ -18,7 +18,7 @@
         <script src="https://cdn.usefathom.com/script.js" data-site="{{ config('services.fathom.site_id') }}" defer></script>
         @endif
     </head>
-    <body class="bg-slate-200 bg-cover bg-no-repeat bg-fixed" style="background-image: url('https://cdn.marslanders.world/images/bg-light.webp')">
+    <body class="bg-slate-200 bg-light dark:bg-dark bg-cover bg-no-repeat bg-fixed">
         <x-nav-header/>
 
         <main>

@@ -18,7 +18,7 @@
             type="text"
             id="marslanders-search"
             name="query"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full ps-10 p-2.5"
+            class="bg-stone-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full ps-10 p-2.5"
             placeholder="Search Mars Landers..."
             required
         />

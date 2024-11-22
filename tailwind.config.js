@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+        backgroundImage: {
+          'light': "url('https://cdn.marslanders.world/images/bg-light.webp')",
+          'dark': "url('https://cdn.marslanders.world/images/bg-dark.webp')",
+        },
         colors: {
           'marslanders-blue': '#122542',
         }
