@@ -1,7 +1,6 @@
 <?php
 
-use App\Jobs\RetrieveBurnedInscriptions;
+use Illuminate\Support\Facades\Schedule;
 
-$schedule->call(function () {
-    (new RetrieveBurnedInscriptions())->handle();
-})->dailyAt('8:00');
+Schedule::command('inscriptions:retrieve-burned')
+    ->dailyAt('6:00');
