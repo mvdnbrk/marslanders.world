@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => 'divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow']) }}>
+<div {{ $attributes->merge(['class' => 'divide-y divide-stone-200 dark:divide-slate-600 overflow-hidden rounded-lg bg-stone-50 dark:bg-slate-800 shadow']) }}>
     <div class="px-4 py-5 sm:p-6">
         <a
             href="{{ route('inscription', ['inscription' => $inscription]) }}"
@@ -14,7 +14,7 @@
     </div>
     <div class="px-4 py-4 sm:px-6">
         <a
-            class="hover:underline underline-offset-2"
+            class="text-orange-700 dark:text-slate-400 hover:underline underline-offset-2"
             href="{{ route('inscription', ['inscription' => $inscription]) }}"
         >
             {{ $inscription->name }}

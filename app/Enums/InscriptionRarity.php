@@ -52,10 +52,10 @@ enum InscriptionRarity
     public function styles(): string
     {
         return match ($this) {
-            self::VERYRARE => 'text-rose-700',
+            self::VERYRARE => 'text-rose-700 dark:text-rose-500',
             self::RARE => 'text-amber-600',
-            self::UNCOMMON => 'text-green-800',
-            self::COMMON => 'text-zinc-700',
+            self::UNCOMMON => 'text-green-800 dark:text-green-600',
+            self::COMMON => 'text-stone-700 dark:text-stone-200',
             default => '',
         };
     }
