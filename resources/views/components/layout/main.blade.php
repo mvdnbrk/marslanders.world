@@ -18,10 +18,10 @@
         <script src="https://cdn.usefathom.com/script.js" data-site="{{ config('services.fathom.site_id') }}" defer></script>
         @endif
     </head>
-    <body class="bg-slate-200 bg-light dark:bg-dark bg-cover bg-no-repeat bg-fixed">
+    <body class="flex flex-col min-h-screen bg-stone-50 dark:bg-stone-900 bg-light dark:bg-dark bg-cover bg-no-repeat bg-fixed">
         <x-nav-header/>
 
-        <main>
+        <main class="flex-grow">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 {{ $slot }}
             </div>
