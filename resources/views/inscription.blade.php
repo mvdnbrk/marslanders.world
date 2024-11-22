@@ -8,7 +8,7 @@
                 {{ $inscription->name }}
             </h1>
             <div class="flex flex-col items-center">
-                <p class="flex items-end py-1 gap-x-2 border-b border-stone-50 dark:border-slate-500 {{ $inscription->rarity()->styles() }} text-base md:text-xl font-bold">
+                <p class="flex items-end py-1 gap-x-2 border-b border-stone-300 dark:border-slate-500 {{ $inscription->rarity()->styles() }} text-base md:text-xl font-bold">
                     <x-icon-rank class="w-8 h-8 md:w-10 md:h-10"/>
                     {{ $inscription->rarity()->name() }}
                 </p>
