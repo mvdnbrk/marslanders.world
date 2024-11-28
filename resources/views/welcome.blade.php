@@ -9,6 +9,6 @@
 
         <x-search/>
 
-        <x-rarity-navigation/>
+        <x-nav-rarity/>
     </div>
 </x-layout.main>

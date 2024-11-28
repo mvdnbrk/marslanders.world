@@ -2,11 +2,11 @@
 
 namespace App\View\Components;
 
+use Illuminate\View\Component;
 use App\Enums\InscriptionRarity;
 use Illuminate\Contracts\View\View;
-use Illuminate\View\Component;
 
-class RarityNavigation extends Component
+class NavRarity extends Component
 {
     public function __construct()
     {
@@ -18,7 +18,7 @@ class RarityNavigation extends Component
         $rarities = InscriptionRarity::cases();
 
         return view(
-            'components.rarity-navigation',
+            'components.nav-rarity',
             compact('rarities'),
         );
     }

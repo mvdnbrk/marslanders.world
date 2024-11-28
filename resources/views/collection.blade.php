@@ -10,7 +10,7 @@
             </h1>
         </div>
 
-        <x-rarity-navigation/>
+        <x-nav-rarity/>
 
         <div class="flex flex-col mt-14">
             <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
