@@ -13,6 +13,9 @@ Route::get('/', HomepageController::class)
 Route::get('/collection', CollectionController::class)
     ->name('collection');
 
+Route::get('/collection/burned', CollectionController::class)
+    ->name('collection.burned');
+
 Route::get('/collection/{rarity}', CollectionController::class)
     ->whereIn('rarity', InscriptionRarity::slugs())
     ->name('collection.rarity');

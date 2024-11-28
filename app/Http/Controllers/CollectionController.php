@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Enums\InscriptionRarity;
 use App\Models\Inscription;
+use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 
 class CollectionController extends Controller
@@ -16,6 +17,9 @@ class CollectionController extends Controller
                     'rank',
                     InscriptionRarity::fromSlug($rarity)->rankRange(),
                 );
+            })
+            ->when(Route::currentRouteNamed('collection.burned'), function ($query) {
+                $query->where('burned', true);
             })
             ->paginate(24);
 
