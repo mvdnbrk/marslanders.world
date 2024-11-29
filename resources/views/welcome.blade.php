@@ -5,7 +5,7 @@
                 class="w-64 object-cover"
                 src="{{ asset('images/marslanders_logo.png') }}"
             >
-            <p class="text-sm -mt-6 w-32 flex justify-between mt-6 text-slate-100">
+            <p class="border-b border-b-slate-400 text-sm -mt-6 w-32 flex justify-between mt-6 text-slate-100">
                 SUPPLY <span class="font-bold">10K</span>
             </p>
             <p class="text-sm w-32 flex justify-between mb-2 text-slate-100">
