@@ -1,5 +1,5 @@
 <nav class="mt-6">
-    <ul class="flex space-x-4">
+    <ul class="flex space-x-2">
         @foreach($rarities as $rarity)
         <li>
             <a
