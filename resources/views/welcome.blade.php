@@ -11,7 +11,7 @@
             <p class="text-sm w-32 flex justify-between mb-2 text-slate-100">
                 BURNED <span class="font-bold">{{ $burn_count }}</span>
             </p>
-            <p class="pt-2 mt-4 text-sm font-black tracking-wider text-yellow-400 mb-4">
+            <p class="pt-2 mt-4 text-center text-sm font-black tracking-wider text-yellow-400 mb-4">
                 The First High-Quality Recursive Revealer on Doginals!
             </p>
         </div>

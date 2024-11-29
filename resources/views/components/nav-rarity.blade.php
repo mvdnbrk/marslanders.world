@@ -10,7 +10,7 @@
             </a>
         </li>
         @endforeach
-        <li class="pl-4">
+        <li class="pl-2">
             <a
                 href="{{ route('collection.burned') }}"
                 class="px-3 py-2 rounded-md text-sm font-medium bg-white hover:text-white hover:bg-gray-700"
