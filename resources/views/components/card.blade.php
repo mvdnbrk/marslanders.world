@@ -7,9 +7,7 @@
         <a
             @class([
                 'relative',
-                'sepia' => $inscription->burned,
-                'saturate-200' => $inscription->burned,
-                'hover:sepia-0 ease-out duration-300' => $inscription->burned,
+                'sepia hover:sepia-0 ease-out duration-300' => $inscription->burned,
             ])
             href="{{ route('inscription', ['inscription' => $inscription]) }}"
         >
