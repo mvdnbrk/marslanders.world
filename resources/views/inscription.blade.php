@@ -8,6 +8,7 @@
                 {{ $inscription->name }}
             </h1>
             <div class="flex flex-col items-center">
+                @if (! $inscription->burned)
                 <p class="flex items-end py-1 gap-x-2 border-b border-stone-300 dark:border-slate-500 {{ $inscription->rarity()->styles() }} text-base md:text-xl font-bold">
                     <x-icon-rank class="w-8 h-8 md:w-10 md:h-10"/>
                     {{ $inscription->rarity()->name() }}
@@ -15,6 +16,7 @@
                 <p class="text-amber-950 dark:text-stone-100 text-sm md:text-base">
                     Rank {{ $inscription->rank }}
                 </p>
+                @endif
             </div>
         </div>
 
@@ -43,7 +45,9 @@
                         </dt>
                         <dd class="flex mt-1 text-sm leading-6 text-amber-800 sm:col-span-2 sm:mt-0">
                             <span class="flex-grow">{{ $trait->value }}</span>
+                            @if (! $inscription->burned)
                             <span class="ml-4 flex-shrink-0">{{ $trait->rarity }}%</span>
+                            @endif
                         </dd>
                     </div>
                     @endforeach
