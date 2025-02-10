@@ -4,7 +4,7 @@
             @if($inscription->isBurned())
             <x-icon-flame class="w-8 h-8 mr-4 text-red-600"/>
             @endif
-            <h1 class="flex-grow text-xl md:text-3xl font-extrabold text-amber-950 dark:text-stone-100">
+            <h1 class="grow text-xl md:text-3xl font-extrabold text-amber-950 dark:text-stone-100">
                 {{ $inscription->name }}
             </h1>
             <div class="flex flex-col items-center">
@@ -30,7 +30,7 @@
             >
         </div>
 
-        <div class="mt-12 bg-white opacity-75 rounded">
+        <div class="mt-12 bg-white opacity-75 rounded-sm">
             <div class="px-2 md:px-4 py-2">
                 <h3 class="text-base font-semibold leading-7 text-amber-950">
                     Traits
@@ -44,9 +44,9 @@
                             {{ $trait->type }}
                         </dt>
                         <dd class="flex mt-1 text-sm leading-6 text-amber-800 sm:col-span-2 sm:mt-0">
-                            <span class="flex-grow">{{ $trait->value }}</span>
+                            <span class="grow">{{ $trait->value }}</span>
                             @if (! $inscription->burned)
-                            <span class="ml-4 flex-shrink-0">{{ $trait->rarity }}%</span>
+                            <span class="ml-4 shrink-0">{{ $trait->rarity }}%</span>
                             @endif
                         </dd>
                     </div>

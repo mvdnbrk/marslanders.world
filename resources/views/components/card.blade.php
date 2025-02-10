@@ -1,6 +1,6 @@
 <div
 {{ $attributes->merge([
-    'class' => 'divide-y divide-stone-200 dark:divide-slate-600 overflow-hidden rounded-lg bg-stone-50 dark:bg-slate-800 shadow'
+    'class' => 'divide-y divide-stone-200 dark:divide-slate-600 overflow-hidden rounded-lg bg-stone-50 dark:bg-slate-800 shadow-sm'
 ])
 }}>
     <div class="p-4">

@@ -1,3 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --background-image-light: url('https://cdn.marslanders.world/images/bg-light.webp');
+  --background-image-dark: url('https://cdn.marslanders.world/images/bg-dark.webp');
+
+  --color-marslanders-blue: #122542;
+}
