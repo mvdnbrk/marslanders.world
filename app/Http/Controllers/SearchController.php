@@ -3,13 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Models\Inscription;
+use App\Models\InscriptionTrait;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\View\View;
 
 class SearchController extends Controller
 {
-    public function __invoke(Request $request): RedirectResponse
+    public function show(): View
+    {
+        $typesAndValues = InscriptionTrait::getTypesAndValues();
+
+        return view('search', compact('typesAndValues'));
+    }
+
+    public function redirect(Request $request): RedirectResponse
     {
         $validated = $request->validate([
             'query' => [
