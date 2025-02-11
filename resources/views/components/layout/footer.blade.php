@@ -3,9 +3,11 @@
         <p class="grow text-sm leading-5 text-amber-800 dark:text-stone-400">
             &copy; 2024 {{ config('app.name') }}. All rights reserved.
         </p>
+        @if(Cache::has('doge_price'))
         <p class="text-sm leading-5 text-amber-800 dark:text-stone-400">
             DOGE PRICE: {{ Number::currency(Cache::get('doge_price'), in: 'USD') }}
         <p>
+        @endif
         <x-twitter-link class="-mt-4 shrink-0 pr-2"/>
     </div>
 </footer>
