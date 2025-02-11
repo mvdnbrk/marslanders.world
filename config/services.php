@@ -43,6 +43,11 @@ return [
         'handle' => env('TWITTER_HANDLE'),
     ],
 
+    'coinmarketcap' => [
+        'base_url' => 'https://pro-api.coinmarketcap.com/v1/',
+        'api_key' => env('COIN_MARKET_CAP_API_KEY'),
+    ],
+
     'ordinalswallet' => [
         'base_url' => 'https://dogeturbo.ordinalswallet.com/',
     ],
