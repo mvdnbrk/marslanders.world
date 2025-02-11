@@ -25,6 +25,7 @@
                                 <input
                                     id="{{ Str::of($type)->append('-')->append($value)->lower() }}"
                                     name="{{ Str::of($type)->append('-')->append($value)->lower() }}"
+                                    value="1"
                                     type="checkbox"
                                     class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-blue-600 checked:bg-blue-600 indeterminate:border-blue-600 indeterminate:bg-blue-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                                 >
