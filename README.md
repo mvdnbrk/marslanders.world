@@ -1,4 +1,4 @@
-<p align="center"><a href="https://marslanders.world" target="_blank"><img src="https://cdn.marslanders.world/images/twitter-card-large.png" width="1500" height="500" alt="Marslanders"></a></p>
+<p align="center"><a href="https://marslanders.world" target="_blank"><img src="https://cdn.marslanders.world/images/twitter-card-large.png" width="800" height="418" alt="Marslanders"></a></p>
 
 # marslanders.world
 
