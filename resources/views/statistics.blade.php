@@ -41,9 +41,10 @@
                         <tbody class="divide-y divide-gray-200 bg-white">
                             @php
                                 $lastType = null;
+                                $row = 0;
                             @endphp
                             @foreach($statistics as $item)
-                            <tr>
+                            <tr class="{{ $item->type !== $lastType && $row > 0 ? 'border-t-4' : '' }}">
                                 <td class="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-6">
                                     {{ $item->type !== $lastType ? $item->type : '' }}
                                 </td>
@@ -53,6 +54,7 @@
                             </tr>
                             @php
                                 $lastType = $item->type;
+                                $row++;
                             @endphp
                             @endforeach
                         </tbody>
