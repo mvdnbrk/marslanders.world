@@ -34,8 +34,8 @@
                             <tr>
                                 <th scope="col" class="py-3.5 pr-3 pl-4 text-left text-sm font-semibold text-stone-900 sm:pl-6">Trait</th>
                                 <th scope="col"></th>
-                                <th scope="col" class="px-3 py-3.5 text-left text-sm text-right font-semibold text-gray-900">Total</th>
-                                <th scope="col" class="px-3 py-3.5 text-left text-sm text-right font-semibold text-gray-900">Burned</th>
+                                <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Total</th>
+                                <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Burned</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200 bg-white">
