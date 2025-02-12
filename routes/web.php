@@ -5,6 +5,7 @@ use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\StatisticsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomepageController::class)
@@ -25,6 +26,9 @@ Route::get(
     InscriptionController::class
 )
     ->name('inscription');
+
+Route::get('/statistics', StatisticsController::class)
+    ->name('statistics');
 
 Route::post('/search', SearchController::class)
     ->name('search');
