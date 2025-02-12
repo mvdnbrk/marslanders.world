@@ -41,6 +41,7 @@
                                 <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Total</th>
                                 <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Burned</th>
                                 <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Alive</th>
+                                <th scope="col" class="hidden sm:block px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Rarity</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200 bg-white">
@@ -57,6 +58,7 @@
                                 <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-gray-500">{{ $item->total_count }}</td>
                                 <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-gray-500">{{ $item->burned_count }}</td>
                                 <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-gray-500">{{ $item->total_count - $item->burned_count }}</td>
+                                <td class="hidden sm:block px-3 py-4 text-sm text-right whitespace-nowrap text-gray-500">{{ Number::format((($item->total_count - $item->burned_count) / (10000 - $burn_count)) * 100, maxPrecision: 2) }}%</td>
                             </tr>
                             @php
                                 $lastType = $item->type;
