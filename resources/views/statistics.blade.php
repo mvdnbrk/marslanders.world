@@ -6,7 +6,7 @@
             </h1>
         </div>
         <div>
-            <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
+            <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-4">
                 <div class="overflow-hidden rounded-lg bg-stone-50 dark:bg-slate-800 opacity-90 px-4 py-5 sm:p-6">
                     <dt class="truncate text-sm font-medium text-stone-500 dark:text-stone-200">SUPPLY</dt>
                     <dd class="mt-1 text-3xl font-semibold tracking-tight text-amber-950 dark:text-stone-100">10K</dd>
@@ -14,6 +14,10 @@
                 <div class="overflow-hidden rounded-lg bg-stone-50 dark:bg-slate-800 opacity-90 px-4 py-5 sm:p-6">
                     <dt class="truncate text-sm font-medium text-stone-500 dark:text-stone-200">BURNED</dt>
                     <dd class="mt-1 text-3xl font-semibold tracking-tight text-amber-950 dark:text-stone-100">{{ $burn_count }}</dd>
+                </div>
+                <div class="overflow-hidden rounded-lg bg-stone-50 dark:bg-slate-800 opacity-90 px-4 py-5 sm:p-6">
+                    <dt class="truncate text-sm font-medium text-stone-500 dark:text-stone-200">ALIVE</dt>
+                    <dd class="mt-1 text-3xl font-semibold tracking-tight text-amber-950 dark:text-stone-100">{{ 10000 - $burn_count }}</dd>
                 </div>
                 @if(Cache::has('doge_price'))
                 <div class="overflow-hidden rounded-lg bg-stone-50 dark:bg-slate-800 opacity-90 px-4 py-5 sm:p-6">
