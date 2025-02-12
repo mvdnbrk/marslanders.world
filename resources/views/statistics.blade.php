@@ -33,32 +33,32 @@
         <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
                 <div class="overflow-hidden ring-1 shadow-sm ring-black/5 sm:rounded-lg">
-                    <table class="min-w-full divide-y divide-gray-300">
-                        <thead class="bg-gray-50">
+                    <table class="min-w-full divide-y divide-stone-100 dark:divide-stone-200">
+                        <thead class="bg-stone-50 dark:bg-slate-800">
                             <tr>
-                                <th scope="col" class="py-3.5 pr-3 pl-4 text-left text-sm font-semibold text-stone-900 sm:pl-6">Trait</th>
+                                <th scope="col" class="py-3.5 pr-3 pl-4 text-left text-sm font-semibold text-stone-900 dark:text-stone-200 sm:pl-6">Trait</th>
                                 <th scope="col"></th>
-                                <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Total</th>
-                                <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Burned</th>
-                                <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Alive</th>
-                                <th scope="col" class="hidden sm:block px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Rarity</th>
+                                <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-stone-900 dark:text-stone-200">Total</th>
+                                <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-stone-900 dark:text-stone-200">Burned</th>
+                                <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-stone-900 dark:text-stone-200">Alive</th>
+                                <th scope="col" class="hidden sm:block px-3 py-3.5 text-sm text-right font-semibold text-stone-900 dark:text-stone-200">Rarity</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-gray-200 bg-white">
+                        <tbody class="divide-y divide-stone-200 dark:divide-stone-900 bg-stone-50 dark:bg-slate-800">
                             @php
                                 $lastType = null;
                                 $row = 0;
                             @endphp
                             @foreach($statistics as $item)
-                            <tr class="{{ $item->type !== $lastType && $row > 0 ? 'border-t-4' : '' }}">
-                                <td class="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-6">
+                            <tr class="{{ $item->type !== $lastType && $row > 0 ? 'border-t-4 border-t-stone-100 dark:border-t-stone-900' : '' }}">
+                                <td class="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-stone-900 dark:text-stone-200 sm:pl-6">
                                     {{ $item->type !== $lastType ? $item->type : '' }}
                                 </td>
-                                <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $item->value }}</td>
-                                <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-gray-500">{{ $item->total_count }}</td>
-                                <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-gray-500">{{ $item->burned_count }}</td>
-                                <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-gray-500">{{ $item->total_count - $item->burned_count }}</td>
-                                <td class="hidden sm:block px-3 py-4 text-sm text-right whitespace-nowrap text-gray-500">{{ Number::format((($item->total_count - $item->burned_count) / (10000 - $burn_count)) * 100, maxPrecision: 2) }}%</td>
+                                <td class="px-3 py-4 text-sm whitespace-nowrap text-stone-500 dark:text-stone-200">{{ $item->value }}</td>
+                                <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-stone-500 dark:text-stone-200">{{ $item->total_count }}</td>
+                                <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-stone-500 dark:text-stone-200">{{ $item->burned_count }}</td>
+                                <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-stone-500 dark:text-stone-200">{{ $item->total_count - $item->burned_count }}</td>
+                                <td class="hidden sm:block px-3 py-4 text-sm text-right whitespace-nowrap text-stone-500 dark:text-stone-200">{{ Number::format((($item->total_count - $item->burned_count) / (10000 - $burn_count)) * 100, maxPrecision: 2) }}%</td>
                             </tr>
                             @php
                                 $lastType = $item->type;
