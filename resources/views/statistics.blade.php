@@ -36,6 +36,7 @@
                                 <th scope="col"></th>
                                 <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Total</th>
                                 <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Burned</th>
+                                <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Left</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200 bg-white">
@@ -51,6 +52,7 @@
                                 <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $item->value }}</td>
                                 <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-gray-500">{{ $item->total_count }}</td>
                                 <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-gray-500">{{ $item->burned_count }}</td>
+                                <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-gray-500">{{ $item->total_count - $item->burned_count }}</td>
                             </tr>
                             @php
                                 $lastType = $item->type;
