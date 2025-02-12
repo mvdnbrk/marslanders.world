@@ -36,7 +36,7 @@
                                 <th scope="col"></th>
                                 <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Total</th>
                                 <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Burned</th>
-                                <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Left</th>
+                                <th scope="col" class="px-3 py-3.5 text-sm text-right font-semibold text-gray-900">Alive</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200 bg-white">
