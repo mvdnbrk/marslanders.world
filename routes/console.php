@@ -8,4 +8,8 @@ Schedule::command('inscriptions:retrieve-burned')
 Schedule::command('marslanders:update-rarity')
     ->dailyAt('6:15');
 
-Schedule::command('doge:cache-price')->hourly();
+Schedule::command('marslanders:cache-holder-count')
+    ->hourly();
+
+Schedule::command('doge:cache-price')
+    ->hourly();

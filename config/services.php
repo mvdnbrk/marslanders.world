@@ -48,6 +48,10 @@ return [
         'api_key' => env('COIN_MARKET_CAP_API_KEY'),
     ],
 
+    'doggy_market' => [
+        'base_url' => 'https://api.doggy.market/',
+    ],
+
     'ordinalswallet' => [
         'base_url' => 'https://dogeturbo.ordinalswallet.com/',
     ],
