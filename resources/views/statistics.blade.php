@@ -57,8 +57,8 @@
                                 <td class="px-3 py-4 text-sm whitespace-nowrap text-stone-500 dark:text-stone-200">{{ $item->value }}</td>
                                 <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-stone-500 dark:text-stone-200">{{ $item->total_count }}</td>
                                 <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-stone-500 dark:text-stone-200">{{ $item->burned_count }}</td>
-                                <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-stone-500 dark:text-stone-200">{{ $item->total_count - $item->burned_count }}</td>
-                                <td class="hidden sm:block px-3 py-4 text-sm text-right whitespace-nowrap text-stone-500 dark:text-stone-200">{{ Number::format((($item->total_count - $item->burned_count) / (10000 - $burn_count)) * 100, maxPrecision: 2) }}%</td>
+                                <td class="px-3 py-4 text-sm text-right whitespace-nowrap text-stone-500 dark:text-stone-200">{{ $item->alive }}</td>
+                                <td class="hidden sm:block px-3 py-4 text-sm text-right whitespace-nowrap text-stone-500 dark:text-stone-200">{{ $item->percentage }}%</td>
                             </tr>
                             @php
                                 $lastType = $item->type;
