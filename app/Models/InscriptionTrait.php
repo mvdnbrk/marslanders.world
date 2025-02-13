@@ -28,7 +28,6 @@ class InscriptionTrait extends Model
         return $this->belongsTo(Inscription::class);
     }
 
-
     public static function getTypes(): Collection
     {
         return static::select('type')
