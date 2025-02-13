@@ -27,8 +27,12 @@ Route::get(
 )
     ->name('inscription');
 
+Route::get('/search', [SearchController::class, 'show'])
+    ->name('search.show');
+
+Route::post('/search', [SearchController::class, 'redirect'])
+    ->name('search.redirect');
+
 Route::get('/statistics', StatisticsController::class)
     ->name('statistics');
 
-Route::post('/search', SearchController::class)
-    ->name('search');
