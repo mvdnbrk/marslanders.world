@@ -13,13 +13,13 @@ class InscriptionTrait extends Model
     public $timestamps = false;
 
     protected array $backgroundHexColors = [
-        'darkblue' => '',
-        'darkred' => '',
-        'darkturquoise' => '',
-        'lightblue' => '',
-        'oceanblue' => '',
-        'orange' => '',
-        'red' => '',
+        'darkblue' => '#2F2B60',
+        'darkred' => '#602C2B',
+        'darkturquoise' => '#2B5B5D',
+        'lightblue' => '#28DFF8',
+        'oceanblue' => '#2B4460',
+        'orange' => '#F98128',
+        'red' => '#F8283C',
     ];
 
     public static function getTypes(): Collection
