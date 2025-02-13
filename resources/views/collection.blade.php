@@ -1,10 +1,10 @@
 <x-layout.main>
     <div class="flex justify-center flex-col">
-        <div class="flex items-center min-h-24 bg-stone-50 dark:bg-slate-800 opacity-90 px-4 py-2 rounded-md">
+        <div class="flex min-h-12 sm:min-h-24 items-center bg-stone-50 dark:bg-slate-800 opacity-90 px-4 py-2 rounded-md">
             @if(Route::currentRouteNamed('collection.burned'))
             <x-icon-flame class="w-8 h-8 mr-4 text-red-600"/>
             @endif
-            <h1 class="text-3xl font-extrabold text-amber-950 dark:text-stone-100">
+            <h1 class="text-xl md:text-3xl font-extrabold text-amber-950 dark:text-stone-100">
                 @if ($rarity)
                 {{ $rarity->name() }} Mars Landers
                 @elseif (Route::currentRouteNamed('collection.burned'))

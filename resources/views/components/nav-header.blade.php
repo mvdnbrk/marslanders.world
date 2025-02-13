@@ -13,6 +13,12 @@
             >
                 collection
             </a>
+            <a
+                class="ml-4 text-orange-100 hover:text-orange-400"
+                href="{{ route('statistics') }}"
+            >
+                statistics
+            </a>
         </span>
         <span class="ml-4 shrink-0">
             <a
