@@ -7,6 +7,7 @@ use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 class CacheHolderCount implements ShouldQueue
@@ -34,6 +35,10 @@ class CacheHolderCount implements ShouldQueue
             $count = Collection::make($response->json())->count();
 
             Cache::put('holder_count', $count);
+        }
+
+        if ($response->failed()) {
+            Log::error('['.get_class($this).'] Failed to retrieve '.$this->apiUrl.' with status code: '.$response->status());
         }
     }
 }

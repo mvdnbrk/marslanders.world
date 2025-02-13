@@ -6,6 +6,7 @@ use App\Models\Inscription;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 class RetrieveBurnedInscriptions implements ShouldQueue
@@ -42,6 +43,10 @@ class RetrieveBurnedInscriptions implements ShouldQueue
                             'burned' => true,
                         ]);
                 });
+        }
+
+        if ($response->failed()) {
+            Log::error('['.get_class($this).'] Failed to retrieve '.$this->apiUrl.' with status code: '.$response->status());
         }
     }
 }
