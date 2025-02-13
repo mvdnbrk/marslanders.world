@@ -1,6 +1,6 @@
 <x-layout.main>
     <div class="flex justify-center flex-col">
-        <div class="flex min-h-24 items-center bg-stone-50 dark:bg-slate-800 opacity-90 px-4 rounded-md">
+        <div class="flex min-h-12 sm:min-h-24 items-center bg-stone-50 dark:bg-slate-800 opacity-90 px-4 rounded-md">
             @if($inscription->isBurned())
             <x-icon-flame class="w-8 h-8 mr-4 text-red-600"/>
             @endif

@@ -5,6 +5,7 @@ use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\StatisticsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomepageController::class)
@@ -31,3 +32,7 @@ Route::get('/search', [SearchController::class, 'show'])
 
 Route::post('/search', [SearchController::class, 'redirect'])
     ->name('search.redirect');
+
+Route::get('/statistics', StatisticsController::class)
+    ->name('statistics');
+
