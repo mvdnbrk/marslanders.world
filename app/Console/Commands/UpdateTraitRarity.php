@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 
 class UpdateTraitRarity extends Command
 {
-    protected $signature = 'marlanders:update-rarity';
+    protected $signature = 'marslanders:update-rarity';
 
     protected $description = 'Update the trait rarity of all Mars Landers';
 
