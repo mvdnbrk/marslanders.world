@@ -14,5 +14,7 @@ class RetrieveBurnedInscriptionsCommand extends Command
     public function handle()
     {
         RetrieveBurnedInscriptions::dispatchSync();
+
+        return Command::SUCCESS;
     }
 }

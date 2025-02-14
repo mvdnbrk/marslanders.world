@@ -17,5 +17,7 @@ class CacheDogePriceCommand extends Command
         CacheDogePrice::dispatchSync();
 
         $this->info('The current Doge price is '.Cache::get('doge_price', default: 'unknown'));
+
+        return Command::SUCCESS;
     }
 }

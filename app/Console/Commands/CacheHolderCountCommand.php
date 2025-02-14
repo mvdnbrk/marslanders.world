@@ -17,5 +17,7 @@ class CacheHolderCountCommand extends Command
         CacheHolderCount::dispatchSync();
 
         $this->info('The current holder count is '.Cache::get('holder_count', default: 'unknown'));
+
+        return Command::SUCCESS;
     }
 }
