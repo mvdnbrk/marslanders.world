@@ -7,9 +7,9 @@ use Illuminate\Console\Command;
 
 class RetrieveBurnedInscriptionsCommand extends Command
 {
-    protected $signature = 'inscriptions:retrieve-burned';
+    protected $signature = 'marslanders:retrieve-burned';
 
-    protected $description = 'Retrieve burned inscriptions';
+    protected $description = 'Retrieve burned Mars Lander inscriptions';
 
     public function handle()
     {
