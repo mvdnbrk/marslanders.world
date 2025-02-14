@@ -5,7 +5,7 @@
     "keywords": ["marslanders", "doge"],
     "require": {
         "php": "^8.3",
-        "blade-ui-kit/blade-icons": "^1.7",
+        "blade-ui-kit/blade-icons": "^1.8",
         "laravel/framework": "^11.42",
         "laravel/tinker": "^2.10",
         "league/flysystem-aws-s3-v3": "^3.29"
