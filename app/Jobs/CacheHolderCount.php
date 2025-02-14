@@ -38,7 +38,7 @@ class CacheHolderCount implements ShouldQueue
         }
 
         if ($response->failed()) {
-            Log::error('['.get_class($this).'] Failed to retrieve '.$this->apiUrl.' with status code: '.$response->status());
+            Log::error('['.get_class($this).'] Failed to retrieve '.$this->apiUrl.' with status code: '.$response->status().' '.$response->headers());
         }
     }
 }
