@@ -26,7 +26,8 @@ class RetrieveBurnedInscriptions implements ShouldQueue
 
     public function handle(): void
     {
-        $response = Http::acceptJson()
+        $response = Http::timeout(60)
+            ->acceptJson()
             ->get($this->apiUrl);
 
         if ($response->successful()) {
