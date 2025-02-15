@@ -18,23 +18,18 @@ class CacheHolderCount implements ShouldQueue
 
     public function __construct()
     {
-        $this->apiUrl = Str::of(config('services.doggy_market.base_url'))
-            ->append('nfts/marslanders/holders')
+        $this->apiUrl = Str::of(config('services.ordinalswallet.base_url'))
+            ->append('collection/mars-landers/stats')
             ->toString();
     }
 
     public function handle(): void
     {
-        $response = Http::withHeaders([
-            'User-Agent' => 'Marslanders/1.0',
-        ])
-            ->acceptJson()
+        $response = Http::acceptJson()
             ->get($this->apiUrl);
 
         if ($response->successful()) {
-            $count = Collection::make($response->json())->count();
-
-            Cache::put('holder_count', $count);
+            Cache::put('holder_count', $response->json('owners'));
         }
 
         if ($response->failed()) {
