@@ -15,6 +15,7 @@ class Inscription extends Model
 
     protected $fillable = [
         'inscription_id',
+        'owner',
         'name',
         'rank',
         'hash',
