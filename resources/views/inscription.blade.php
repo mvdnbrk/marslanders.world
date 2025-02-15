@@ -29,7 +29,7 @@
                 alt="={{ $inscription->name }}"
             >
             @if ($inscription->owner)
-            <h4 class="mt-1 px-2 md:px-4 py-2 max-w-[500px] truncate bg-stone-50 dark:bg-slate-800 opacity-75 text-sm rounded-md">
+            <h4 class="mt-1 px-2 md:px-4 py-2 max-w-[500px] truncate bg-stone-50 dark:bg-slate-800 text-amber-950 dark:text-stone-100 opacity-75 text-sm rounded-md">
                 <span class="font-semibold mr-2">Owner</span>
                 {{ $inscription->owner }}
             </h4>
