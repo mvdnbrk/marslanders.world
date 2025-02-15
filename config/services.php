@@ -39,6 +39,10 @@ return [
         'site_id' => env('FATHOM_SITE_ID'),
     ],
 
+    'horizon' => [
+        'token' => env('HORIZON_TOKEN')
+    ],
+
     'twitter' => [
         'handle' => env('TWITTER_HANDLE'),
     ],
