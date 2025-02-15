@@ -2,11 +2,14 @@
 
 use Illuminate\Support\Facades\Schedule;
 
-Schedule::command('inscriptions:retrieve-burned')
-    ->dailyAt('6:00');
+Schedule::command('marslanders:retrieve-burned')
+    ->dailyAt('5:00');
 
 Schedule::command('marslanders:update-rarity')
-    ->dailyAt('6:15');
+    ->dailyAt('5:15');
+
+Schedule::command('marslanders:retrieve-owners')
+    ->dailyAt('5:30');
 
 Schedule::command('marslanders:cache-holder-count')
     ->hourly();
