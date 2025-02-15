@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        <div class="mt-8">
+        <div class="flex flex-col mt-8">
             <img
                 src="{{ $inscription->image_url }}"
                 width="500"
@@ -28,6 +28,11 @@
                 class="rounded-md shadow-lg"
                 alt="={{ $inscription->name }}"
             >
+            @if ($inscription->owner)
+            <h4 class="px-2 md:px-4 py-2">
+                Owner: {{ $inscription->owner }}
+            </h4>
+            @endif
         </div>
 
         <div class="mt-12 bg-white opacity-75 rounded-sm">
