@@ -26,7 +26,7 @@ class CacheHolderCount implements ShouldQueue
     public function handle(): void
     {
         $response = Http::withHeaders([
-            'User-Agent' => request()->header('User-Agent'),
+            'User-Agent' => 'Marslanders/1.0',
         ])
             ->acceptJson()
             ->get($this->apiUrl);
