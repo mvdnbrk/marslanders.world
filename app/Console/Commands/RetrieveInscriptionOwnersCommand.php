@@ -16,10 +16,14 @@ class RetrieveInscriptionOwnersCommand extends Command
 
     public function handle()
     {
-        Inscription::chunk(200, function (Collection $inscriptions) {
-            foreach ($inscriptions as $index => $inscription) {
+        $totalIndex = 0;
+
+        Inscription::chunk(200, function (Collection $inscriptions) use (&$totalIndex) {
+            foreach ($inscriptions as $inscription) {
                 RetrieveInscriptionOwner::dispatch($inscription->inscription_id)
-                    ->delay(Carbon::now()->addSeconds($index * 2));
+                    ->delay(Carbon::now()->addSeconds($totalIndex * 4));
+
+                $totalIndex++;
             }
 
             $this->info("Dispatched a batch of " . $inscriptions->count() . " jobs.");
