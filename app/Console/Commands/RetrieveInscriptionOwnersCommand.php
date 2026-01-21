@@ -2,11 +2,11 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Inscription;
-use Illuminate\Support\Carbon;
-use Illuminate\Console\Command;
 use App\Jobs\RetrieveInscriptionOwner;
+use App\Models\Inscription;
+use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Carbon;
 
 class RetrieveInscriptionOwnersCommand extends Command
 {
@@ -26,10 +26,10 @@ class RetrieveInscriptionOwnersCommand extends Command
                 $totalIndex++;
             }
 
-            $this->info("Dispatched a batch of " . $inscriptions->count() . " jobs.");
+            $this->info('Dispatched a batch of '.$inscriptions->count().' jobs.');
         });
 
-        $this->info("All jobs have been dispatched succesfully!");
+        $this->info('All jobs have been dispatched succesfully!');
 
         return Command::SUCCESS;
     }

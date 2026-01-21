@@ -3,11 +3,11 @@
 namespace App\Jobs;
 
 use App\Models\Inscription;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Queue\Queueable;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 
 class RetrieveInscriptionOwner implements ShouldQueue
 {
@@ -31,6 +31,7 @@ class RetrieveInscriptionOwner implements ShouldQueue
     {
         if (! $inscription = Inscription::where('inscription_id', $this->inscriptionId)->first()) {
             Log::warning("Inscription with ID {$this->inscriptionId} not found.");
+
             return;
         }
 
