@@ -2,10 +2,11 @@
 
 namespace Database\Factories;
 
+use App\Models\InscriptionTrait;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\InscriptionTrait>
+ * @extends Factory<InscriptionTrait>
  */
 class InscriptionTraitFactory extends Factory
 {
