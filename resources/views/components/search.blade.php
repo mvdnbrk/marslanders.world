@@ -1,6 +1,6 @@
 <form
     class="flex grow items-center"
-    action="{{ route('search') }}"
+    action="{{ route('search.redirect') }}"
     method="POST"
 >
     @csrf
